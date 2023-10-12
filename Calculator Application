@@ -1,0 +1,103 @@
+/**
+ * 
+ */
+package com.gqt.calculatorapp.project;
+import java.util.Scanner;
+
+/**
+ * @author Rajeshwari
+ *
+ */
+public class calculator {
+	public static int num_1;
+	public static int num_2;
+
+
+
+	/**
+	 * @param args
+	 * this is the main function which has source code as the calculator application
+	 */
+	public static void collectInput() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the first number:");
+		num_1=sc.nextInt();
+		System.out.println("enter the second number:");
+		num_2=sc.nextInt();
+		
+	}
+														  							
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("\t\t WELCOME TO CALCULATOR APPLICATION");
+		System.out.println();
+
+		System.out.println("please select the operation to be performed: \n"
+				+ "1. addition operation\n"
+				+"2. subtraction operation\n"
+				+"3. multiplication operation\n"
+				+"4. diviion operation\n"
+				+"5. modulus operation\n"
+				+"6. exit\n"
+				+ "7. restart");
+	
+
+		int choice=sc.nextInt();
+
+		switch(choice) {
+		case 1: {
+			System.out.println("addition operation\n");
+			collectInput();
+			System.out.println("the result of addition is:" + (num_1+num_2));
+			
+			break;
+
+		}
+		case 2: {
+			System.out.println("subtraction operation\n");
+			collectInput();
+			System.out.println("the result of subtraction is:" + (num_1-num_2));
+			break;
+
+		}
+		case 3: {
+			System.out.println("multiplication operation\n");
+			collectInput();
+			System.out.println("the result of multiplication is:" + (num_1*num_2));
+			break;
+
+		}
+		case 4: {
+			System.out.println("division operation\n");
+			collectInput();
+			System.out.println("the result of division  is:" + (num_1/num_2));
+			break;
+
+		}
+
+		case 5: {
+			System.out.println("modulus operation\n");
+			collectInput();
+			System.out.println("the result of modulus is:" + (num_1%num_2));
+			break;
+		}
+		case 6: {
+			System.out.println("thank you");
+			System.exit(0);
+		}
+		case 7: {
+			main(null);
+		}
+		default:
+			System.out.println("this is not valid input please try again");
+			main(null);
+		}
+		main(null);
+
+
+
+
+	}
+
+}
